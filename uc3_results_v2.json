@@ -1,0 +1,149 @@
+{
+  "use_case": "UC3",
+  "revision": "v2.0",
+  "description": "EEG Only \u2014 EEGNet(D=2) + DE + PSD Attention Fusion",
+  "dataset": "EAV",
+  "n_test_samples": 2400,
+  "n_test_subjects": 6,
+  "test_subjects": [
+    "Subject15",
+    "Subject16",
+    "Subject18",
+    "Subject2",
+    "Subject8",
+    "Subject41"
+  ],
+  "seed": 42,
+  "evaluated_at": "2026-09-05T22:14:28.862685",
+  "accuracy": 42.4167,
+  "macro_f1": 0.4109,
+  "weighted_f1": 0.4109,
+  "cohen_kappa": 0.2802,
+  "per_class": {
+    "Happiness": {
+      "precision": 0.495,
+      "recall": 0.625,
+      "f1_score": 0.5525,
+      "support": 480
+    },
+    "Sadness": {
+      "precision": 0.3702,
+      "recall": 0.5437,
+      "f1_score": 0.4405,
+      "support": 480
+    },
+    "Angry": {
+      "precision": 0.649,
+      "recall": 0.4083,
+      "f1_score": 0.5013,
+      "support": 480
+    },
+    "Calmness": {
+      "precision": 0.3472,
+      "recall": 0.1396,
+      "f1_score": 0.1991,
+      "support": 480
+    },
+    "Neutral": {
+      "precision": 0.3266,
+      "recall": 0.4042,
+      "f1_score": 0.3613,
+      "support": 480
+    }
+  },
+  "confusion_matrix": [
+    [
+      300,
+      41,
+      64,
+      33,
+      42
+    ],
+    [
+      73,
+      261,
+      2,
+      11,
+      133
+    ],
+    [
+      137,
+      31,
+      196,
+      60,
+      56
+    ],
+    [
+      56,
+      155,
+      33,
+      67,
+      169
+    ],
+    [
+      40,
+      217,
+      7,
+      22,
+      194
+    ]
+  ],
+  "confusion_matrix_normalized": [
+    [
+      0.625,
+      0.0854,
+      0.1333,
+      0.0688,
+      0.0875
+    ],
+    [
+      0.1521,
+      0.5438,
+      0.0042,
+      0.0229,
+      0.2771
+    ],
+    [
+      0.2854,
+      0.0646,
+      0.4083,
+      0.125,
+      0.1167
+    ],
+    [
+      0.1167,
+      0.3229,
+      0.0688,
+      0.1396,
+      0.3521
+    ],
+    [
+      0.0833,
+      0.4521,
+      0.0146,
+      0.0458,
+      0.4042
+    ]
+  ],
+  "model": {
+    "architecture": "EEGAttentionFusionModel",
+    "n_channels": 30,
+    "epoch_samples": 500,
+    "de_dim": 150,
+    "psd_dim": 150,
+    "hidden_dim": 256,
+    "n_params": 674120,
+    "eegnet_F1": 8,
+    "eegnet_D": 2,
+    "eegnet_F2": 16,
+    "orig_sfreq": 500,
+    "target_sfreq": 100,
+    "epoch_duration": 5
+  },
+  "mean_attention_weights": {
+    "eegnet_raw": 1.888707944651106e-17,
+    "de_features": 0.2536827027797699,
+    "psd_features": 0.7463172674179077
+  },
+  "split_note": "EEG-specific 30/6/6 split (independent of Audio UC1 split)"
+}
