@@ -1,0 +1,52 @@
+{
+  "train": [
+    "Subject9",
+    "Subject3",
+    "subject11",
+    "subject27",
+    "subject38",
+    "subject19",
+    "subject40",
+    "subject26",
+    "Subject4",
+    "subject34",
+    "subject23",
+    "subject12",
+    "subject30",
+    "subject22",
+    "subject13",
+    "subject25",
+    "subject36",
+    "subject37",
+    "subject33",
+    "subject14",
+    "subject24",
+    "subject21",
+    "subject29",
+    "subject39",
+    "subject31",
+    "subject20",
+    "subject17",
+    "subject42",
+    "subject35",
+    "subject32"
+  ],
+  "val": [
+    "Subject10",
+    "Subject2",
+    "subject28",
+    "Subject5",
+    "Subject6",
+    "Subject8"
+  ],
+  "test": [
+    "subject15",
+    "subject16",
+    "subject18",
+    "Subject1",
+    "Subject7",
+    "subject41"
+  ],
+  "seed": 42,
+  "created": "2026-06-15 01:43:36"
+}
